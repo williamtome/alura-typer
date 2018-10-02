@@ -10,3 +10,16 @@ campo.on("input", function () {
     $("#contador-palavras").text(qtdePalavras);
     $("#contador-caracteres").text(conteudo.length);
 });
+
+var tempo = $("#tempo-digitacao").text();
+campo.one("focus", function(){
+    var cronometroId = setInterval(function(){
+        tempo--;
+        $("#tempo-digitacao").text(tempo);
+        if (tempo < 1) {
+            campo.attr("disabled", true);
+            clearInterval(cronometroId);
+        }        
+    },1000)
+    
+});
