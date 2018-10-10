@@ -6,6 +6,7 @@ $(document).ready(function () {
     inicializaContadores();
     inicializaCronometro();
     $("#reiniciar").click(reiniciaJogo);
+    inicializaMarcadores();
 });
 
 function atualizaTamanhoFrase() {
@@ -39,6 +40,19 @@ function inicializaCronometro() {
     });    
 }
 
+function inicializaMarcadores() {
+    var frase = $(".frase").text();
+    $(campo).on("input", function () {
+        var digitado = campo.val();
+        var digitouCorreto = frase.startsWith(digitado);
+        if (digitouCorreto) {
+            campo.addClass("borda-verde");
+        } else {
+            campo.addClass("borda-vermelha");
+        }
+    });
+}
+
 function reiniciaJogo() {
     campo.attr("disabled", false);      
     campo.val("");
@@ -47,4 +61,6 @@ function reiniciaJogo() {
     $("#tempo-digitacao").text(tempoInicial);
     inicializaCronometro();
     campo.toggleClass("campo-desativado");
+    campo.removeClass("borda-vermelha");
+    campo.removeClass("borda-verde");
 }
