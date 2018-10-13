@@ -8,38 +8,61 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <section>
-        <div class="container">
-            <h1 class="center">Alura Typer</h1>
-            <p class="frase center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua.</p>        
-            <ul class="informacoes center">
-                <li>
-                    <i class="small material-icons icones">description</i>
-                    <span id="tamanho-frase">0</span> palavras
-                </li>
-                <li>
-                    <i class="small material-icons icones">query_builder</i>
-                    <span id="tempo-digitacao">10</span> segundos
-                </li>
-            </ul>
-    
-            <textarea class="campo-digitacao" cols="40" rows="10"></textarea>
+    <div class="container">
+        <h1 class="center">Alura Typer</h1>
+        <p class="frase center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua.</p>        
+        <ul class="informacoes center">
+            <li>
+                <i class="small material-icons icones">description</i>
+                <span id="tamanho-frase">0</span> palavras
+            </li>
+            <li>
+                <i class="small material-icons icones">query_builder</i>
+                <span id="tempo-digitacao">10</span> segundos
+            </li>
+        </ul>
 
-            <a class="btn-floating btn-large waves-effect waves-light red" id="reiniciar">
-                <i class="material-icons">restore</i>
-            </a>
-    
-            <ul class="center">
-                <li><span id="contador-caracteres">0</span> caracteres</li>
-                <li><span id="contador-palavras">0</span> palavras</li>
-            </ul>
-        </div>
-    </section>
+        <textarea class="campo-digitacao" cols="40" rows="10"></textarea>
+
+        <a class="btn-floating btn-large waves-effect waves-light red" id="reiniciar">
+            <i class="material-icons">restore</i>
+        </a>
+
+        <ul class="center">
+            <li><span id="contador-caracteres">0</span> caracteres</li>
+            <li><span id="contador-palavras">0</span> palavras</li>
+        </ul>
+
+        <section class="placar">
+            <h3 class="center">Placar</h3>
+            <table class="centered bordered">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Nº Palavras</th>
+                        <th>Remover?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>William</td>
+                        <td>10</td>
+                        <td>
+                            <a href="#" class="botao-remover">
+                                <i class="small material-icons">delete</i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
 
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/placar.js"></script>
 
 </body>
 </html>
