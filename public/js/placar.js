@@ -1,3 +1,6 @@
+$("#botao-placar").click(function(){
+    $(".placar").slideToggle(600);
+});
 
 function inserePlacar() {
     var corpoTabela = $(".placar").find("tbody");
