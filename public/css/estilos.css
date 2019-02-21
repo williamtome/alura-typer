@@ -1,3 +1,6 @@
+body{
+    overflow: scroll;
+}
 .frase{
     font-size: 20px;
     text-align: left;
@@ -23,4 +26,7 @@
 }
 .borda-vermelha{
     border-color: red;
+}
+.placar{
+    display: none;
 }
